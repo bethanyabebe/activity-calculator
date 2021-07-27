@@ -57,4 +57,30 @@ def results():
     #return render_template('results.html')
     
     response = requests.get(url + "location=" + latitude + ",%20" + longitude + "&type=" + activity + "&radius=" + "5000" + "&key=" + api_key).json()
-    return response
+    #"name", "photo_reference", "formatted_address", "pricing_level" + "rating" (optional)
+    #https://maps.googleapis.com/maps/api/place/photo?photoreference=PHOTO_REFERENCE&sensor=false&maxheight=MAX_HEIGHT&maxwidth=MAX_WIDTH&key=YOUR_API_KEY 
+    #return response
+
+    #for location in response:
+    # location=response["rows"][0]["elements"][0]
+    # location_name = location["name"]
+    # data = {
+    #     'name':location_name,
+    #     }
+    # return render_template('results.html',data=data)
+
+    url_place="https://maps.googleapis.com/maps/api/place/details/json?place_id="
+
+    #for place in response["results"]:
+    my_place_id = "ChIJfx3HmItZwokR7ssq4aeNH6Y"
+    my_field = "name,formatted_address" 
+    place_details = requests.get(url_place+my_place_id+"&fields="+my_field+"&key="+api_key).json()
+    #print(place_details)
+    return place_details
+    #ChIJN1t_tDeuEmsRUsoyG[…]&fields=name,rating,formatted_phone_number&key=YOUR_API_KEY
+    
+    #clue = model.random_clue()
+    # data = {
+    #     'clue':clue,
+    # }
+    # return render_template('clue.html',data=data)
