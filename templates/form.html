@@ -1,0 +1,93 @@
+{% extends 'base.html'%}
+
+{% block title%}
+
+{% endblock title%}
+
+{% block content%}
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/base.html">
+    <img src="https://i.pinimg.com/originals/4e/c8/89/4ec889505488448d78c0eb5c3b1f76b6.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
+    Activity Calculator
+  </a>
+</nav>
+
+<body style="background-color:rgb(0, 0, 0)">
+<p class="text-white"> 
+
+<form action="/results" method="POST">
+<!-- <form>     -->
+    <p class="text-white">Up to how far are you willing to travel?</p>
+    <input type="radio" id="5" name="distance" value="5" required>
+    <label for="5">5 miles</label><br>
+    <input type="radio" id="10" name="distance" value="10" required>
+    <label for="10">10 miles</label><br>
+    <input type="radio" id="15" name="distance" value="15" required>
+    <label for="15">15 miles</label><br>
+    <input type="radio" id="20" name="distance" value="20" required>
+    <label for="20">15+ miles</label>
+<!-- </form> -->
+
+<!-- <form> -->
+    <p class="text-white">How much are you willing to spend?</p>
+    <input type="radio" id="$0-20" name="cost" value="$0-20" required>
+    <label for="$0-20">$0-20</label><br>
+    <input type="radio" id="$20-50" name="cost" value="$20-50" required>
+    <label for="$20-50">$20-50</label><br>
+    <input type="radio" id="$50-100" name="cost" value="$50-100" required>
+    <label for="$50-100">$50-100</label><br>
+    <input type="radio" id="$100+" name="cost" value="$100+" required>
+    <label for="$100+">$100+</label>
+<!-- </form> -->
+
+<!-- <form> -->
+    <p class="text-white">Would you like a more active or relaxing activity?</p>
+    <input type="radio" id="active" name="type" value="active" required>
+    <label for="active">active</label><br>
+    <input type="radio" id="relaxing" name="type" value="relaxing" required>
+    <label for="relaxing">relaxing</label>
+<!-- </form> -->
+
+<!-- <form action="/results"> -->
+    <p class="text-white">Which of the following is more important to you?</p>
+    <input type="radio" id="distance" name="preference" value="distance" required>
+    <label for="distance">Distance</label><br>
+    <input type="radio" id="cost" name="preference" value="cost" required>
+    <label for="cost">Cost</label><br>
+    <input type="radio" id="activity_type" name="preference" value="activity_type" required>
+    <label for="activity_type">Type of activity</label><br>
+
+<p class="text-white"> In order to provide accurate locations, we will need your current location. Please click
+    the button below to allow for location usage. Required*
+</p>
+    <button id="get-location">
+        Allow Location
+    </button>
+    <input type='hidden' name = 'longitude' id='longitude'>
+    <input type='hidden' name = 'latitude' id='latitude'>
+    <br>
+    <input type="submit" value="Submit">
+<!-- </form> -->
+</form>
+</p>
+
+<script>
+        let button = document.getElementById("get-location");
+        let latText = document.getElementById("latitude");
+        let longText = document.getElementById("longitude");
+        button.addEventListener("click", function (e) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                let lat = position.coords.latitude;
+                let long = position.coords.longitude;
+                latText.innerText = lat.toFixed(2);
+                longText.innerText = long.toFixed(2);
+                document.getElementById("longitude").value = long.toFixed(2).toString();
+                document.getElementById("latitude").value = lat.toFixed(2).toString();
+                console.log(long.toFixed(2).toString())
+                console.log(lat.toFixed(2).toString())
+            });
+            e.preventDefault()
+        });
+    </script>
+</body>
+{% endblock content%}

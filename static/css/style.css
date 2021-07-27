@@ -1,1 +1,11 @@
 /* Write custom CSS styling here */
+.row{
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+.row-m-t{
+  margin-top : 10px
+}
+
+<p class="text-white bg-dark">
