@@ -61,7 +61,7 @@ def results():
             response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + activity + "+" + city + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
             current = response["results"][0]
         except:
-            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + activity + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
+            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + "bowling" + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
             current = response["results"][0]
     name = current["name"]
     try:
@@ -92,7 +92,7 @@ def results():
             response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + activity + "+" + city + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
             current = response["results"][1]
         except:
-            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + activity + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
+            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + "bowling" + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
             current = response["results"][1]
     name = current["name"]   
     try:
@@ -123,7 +123,7 @@ def results():
             response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + activity + "+" + city + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
             current = response["results"][2]
         except:
-            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + activity + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
+            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + "bowling" + "+" + state + "&key=AIzaSyCnN73kgwTBjjYGNg3HIfB5e9_KrtwqkfQ").json()
             current = response["results"][2]
     name = current["name"]
     try:

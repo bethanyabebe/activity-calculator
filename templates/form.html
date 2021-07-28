@@ -12,8 +12,10 @@
   </a>
 </nav>
 
-<body style="background-color:rgb(0, 0, 0)">
+<body style="background-color:rgb(0, 0, 0); text-align:center">
 <p class="text-white"> 
+
+<p class="text-white fs-4">Complete this quiz to recieve the best results</p>
 
 <form action="/results" method="POST">
 <!-- <form>     -->
@@ -25,7 +27,8 @@
     <input type="radio" id="15" name="distance" value="15" required>
     <label for="15" class ="text-white">15 miles</label><br>
     <input type="radio" id="20" name="distance" value="20" required>
-    <label for="20"class ="text-white">15+ miles</label>
+    <label for="20"class ="text-white">15+ miles</label><br>
+    <br>
 <!-- </form> -->
 
 <!-- <form> -->
@@ -37,15 +40,17 @@
     <input type="radio" id="$50-100" name="cost" value="$50-100" required>
     <label for="$50-100" class ="text-white">$50-100</label><br>
     <input type="radio" id="$100+" name="cost" value="$100+" required>
-    <label for="$100+" class ="text-white">$100+</label>
+    <label for="$100+" class ="text-white">$100+</label><br>
+    <br>
 <!-- </form> -->
 
 <!-- <form> -->
     <p class="text-white">Would you like a more active or relaxing activity?</p>
     <input type="radio" id="active" name="type" value="active" required>
-    <label for="active" class ="text-white">active</label><br>
+    <label for="active" class ="text-white">Active</label><br>
     <input type="radio" id="relaxing" name="type" value="relaxing" required>
-    <label for="relaxing" class ="text-white">relaxing</label>
+    <label for="relaxing" class ="text-white">Relaxing</label><br>
+    <br>
 <!-- </form> -->
 
 <!-- <form action="/results"> -->
@@ -56,17 +61,19 @@
     <label for="cost" class ="text-white">Cost</label><br>
     <input type="radio" id="activity_type" name="preference" value="activity_type" required>
     <label for="activity_type" class ="text-white">Type of activity</label><br>
+    <br>
 
 <p class="text-white"> In order to provide accurate locations, we will need your current location. Please click
     the button below to allow for location usage. Required*
 </p>
-    <button id="get-location">
+    <button id="get-location" class="btn btn-outline-light">
         Allow Location
     </button>
     <input type='hidden' name = 'longitude' id='longitude'>
     <input type='hidden' name = 'latitude' id='latitude'>
     <br>
-    <input type="submit" value="Submit">
+    <br>
+    <input type="submit" value="Submit" class="btn btn-success">
 <!-- </form> -->
 </form>
 </p>

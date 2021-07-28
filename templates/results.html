@@ -11,10 +11,12 @@
   </a>
 </nav>
 
+<body style="background-color:rgb(0, 0, 0);text-align:center"></body>
+
 <div class="container">
   <div class="row">
    <div class="col-sm">
-<div class="card" style="width: 18rem;">
+<div class="card h-100" style="width: 18rem;">
   <img class="card-img-top" src={{data.photo}} alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> {{data.name}}</h5>
@@ -23,7 +25,7 @@
 </div>
 </div>
 <div class="col-sm">
-<div class="card" style="width: 18rem;">
+<div class="card h-100" style="width: 18rem;">
   <img class="card-img-top" src={{data2.photo}} alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> {{data2.name}}</h5>
@@ -32,7 +34,7 @@
 </div>
 </div>
 <div class="col-sm">
-<div class="card" style="width: 18rem;">
+<div class="card h-100" style="width: 18rem;">
   <img class="card-img-top" src={{data3.photo}} alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"> {{data3.name}}</h5>
@@ -42,5 +44,7 @@
 </div>
 </div>
 </div>
+
+<button class="btn btn-danger" onClick="window.location.reload();">Generate More Activites</button>
 
 {% endblock content%}
