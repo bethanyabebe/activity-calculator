@@ -1,8 +1,6 @@
 {% extends 'base.html'%}
 
-{% block title%}
-
-{% endblock title%}
+{% block title%}Your Results{% endblock title%}
 
 {% block content%}
 
@@ -13,15 +11,36 @@
   </a>
 </nav>
 
-<!-- <div class="ui segment"  style="max-height:500px;overflow:scroll">
-    <div class="ui divided items">
-        <div class="item" v-for="place in places" :key="place.id">
-            <div class="content">
-                <div class="header">{{place.name}}</div>
-                <div class="meta">{{place.vicinity}}</div>
-            </div>
-        </div>
-    </div>
-</div> -->
+<div class="container">
+  <div class="row">
+   <div class="col-sm">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{data.photo}} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> {{data.name}}</h5>
+    <p class="card-text"> {{data.vicinity}} <br> Rating: {{data.rating}}</p>
+  </div>
+</div>
+</div>
+<div class="col-sm">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{data2.photo}} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> {{data2.name}}</h5>
+    <p class="card-text"> {{data2.vicinity}} <br> Rating:  {{data2.rating}}</p>
+  </div>
+</div>
+</div>
+<div class="col-sm">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{data3.photo}} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> {{data3.name}}</h5>
+    <p class="card-text"> {{data3.vicinity}} <br> Rating: {{data3.rating}}</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
 
 {% endblock content%}
