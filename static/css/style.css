@@ -8,21 +8,12 @@
   margin-top : 10px
 }
 
-.imgbio2 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background:white;
-    color: black;
-    text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    font-size: 35px;
-  }
-
-.samsimg:hover .imgbio2 {
-    visibility: visible;
-    opacity: 1;
-  }
+hr {
+  display: block;
+  margin-top: 0.05em;
+  margin-bottom: 0.05em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
