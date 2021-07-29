@@ -1,4 +1,4 @@
-# Flask Final Project Starter Template
+# Activity Calculator
 ## Directions
 1. Log into GitHub and click the `Use this template` button
 2. Name your new repository with a descriptive name
