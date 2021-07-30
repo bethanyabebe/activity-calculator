@@ -1,4 +1,8 @@
 # Activity Calculator
+
+## Website Link
+activitycalculator.herokuapp.com
+
 ## Purpose
 Our project helps people connect with their community by recommending activities in their area. We decided to build this website to promote small business to people who are located nearby. We were inspired by articles describing how small business have been greatly negatively impacted during this pandemic
 
